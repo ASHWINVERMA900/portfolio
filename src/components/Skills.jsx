@@ -1,17 +1,68 @@
 import React from "react";
+import {
+  SiReact,
+  SiTailwindcss,
+  SiHtml5,
+  SiJavascript,
+  SiSpringboot,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiGit,
+  SiVite,
+  SiPostman,
+  SiFigma,
+  SiJira,
+  SiCplusplus,
+  SiPostgresql,
+  SiGithub,
+  SiSwagger,
+} from "react-icons/si";
+import { FaCss3Alt, FaJava, FaDatabase, FaCode } from "react-icons/fa";
+import { TbDatabase } from "react-icons/tb";
 
 const categories = [
   {
     title: "Frontend",
-    skills: ["React", "Tailwind CSS", "HTML", "CSS", "JavaScript"],
+    skills: [
+      { name: "React", icon: SiReact, color: "text-cyan-400" },
+      { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-300" },
+      { name: "HTML", icon: SiHtml5, color: "text-orange-500" },
+      { name: "CSS", icon: FaCss3Alt, color: "text-blue-500" },
+      { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400" },
+    ],
   },
   {
-    title: "Backend",
-    skills: ["Spring Boot", "Node.js", "Express", "REST APIs", "MongoDB"],
+    title: "Backend Languages",
+    skills: [
+      { name: "Java", icon: FaJava, color: "text-orange-600" },
+      { name: "C++", icon: SiCplusplus, color: "text-blue-600" },
+      { name: "Spring Boot", icon: SiSpringboot, color: "text-green-500" },
+      { name: "Node.js", icon: SiNodedotjs, color: "text-green-600" },
+      { name: "Express", icon: SiExpress, color: "text-slate-300" },
+    ],
   },
   {
-    title: "Tools",
-    skills: ["Git", "Vite", "Postman", "Figma", "Jira"],
+    title: "Databases & ORM",
+    skills: [
+      { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-400" },
+      { name: "MongoDB", icon: SiMongodb, color: "text-green-500" },
+      { name: "Hibernate", icon: TbDatabase, color: "text-purple-500" },
+      { name: "SQL", icon: FaDatabase, color: "text-slate-300" },
+    ],
+  },
+  {
+    title: "Developer Tools",
+    skills: [
+      { name: "VS Code", icon: FaCode, color: "text-blue-500" },
+      { name: "Git", icon: SiGit, color: "text-orange-600" },
+      { name: "GitHub", icon: SiGithub, color: "text-slate-100" },
+      { name: "Swagger", icon: SiSwagger, color: "text-green-400" },
+      { name: "Vite", icon: SiVite, color: "text-purple-500" },
+      { name: "Postman", icon: SiPostman, color: "text-orange-500" },
+      { name: "Figma", icon: SiFigma, color: "text-purple-400" },
+      { name: "Jira", icon: SiJira, color: "text-blue-600" },
+    ],
   },
 ];
 
@@ -27,14 +78,18 @@ const Skills = () => {
 
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {categories.map((category) => (
-            <div key={category.title} className="rounded-xl sm:rounded-[2rem] border border-white/10 bg-slate-900/90 p-6 sm:p-8 shadow-2xl shadow-slate-950/20">
+            <div key={category.title} className="rounded-xl sm:rounded-4xl border border-white/10 bg-slate-900/90 p-6 sm:p-8 shadow-2xl shadow-slate-950/20">
               <h3 className="text-xl sm:text-2xl font-semibold text-white">{category.title}</h3>
-              <div className="mt-4 sm:mt-6 space-y-2 sm:space-y-3">
-                {category.skills.map((skill) => (
-                  <div key={skill} className="rounded-full bg-slate-950/75 px-4 py-2.5 sm:py-3 text-xs sm:text-sm text-slate-200 text-center">
-                    {skill}
-                  </div>
-                ))}
+              <div className="mt-4 sm:mt-6 grid grid-cols-2 gap-3 sm:gap-4">
+                {category.skills.map((skill) => {
+                  const IconComponent = skill.icon;
+                  return (
+                    <div key={skill.name} className="rounded-xl border border-white/10 bg-slate-950/70 p-4 sm:p-5 hover:border-indigo-500/50 hover:bg-slate-950/90 transition group cursor-pointer">
+                      <IconComponent className={`${skill.color} text-2xl sm:text-3xl mb-2 group-hover:scale-110 transition`} />
+                      <p className="text-xs sm:text-sm font-medium text-slate-200">{skill.name}</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           ))}

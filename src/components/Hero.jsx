@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="relative mx-auto flex max-w-7xl flex-col gap-12 sm:gap-16 lg:gap-24 px-4 sm:px-6 lg:flex-row lg:items-center">
         <div className="max-w-2xl space-y-8">
           <span className="inline-flex rounded-full bg-indigo-500/15 px-4 py-2 text-sm font-medium text-indigo-300 ring-1 ring-indigo-500/20">
-            Portfolio • Web Developer • UI Focused
+            Portfolio • Web Developer
           </span>
 
           <div className="space-y-6">
