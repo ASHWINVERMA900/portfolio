@@ -15,18 +15,26 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(99,102,241,0.08),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(168,85,247,0.06),transparent_30%)] dark:bg-[radial-gradient(circle_at_top,rgba(99,102,241,0.18),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(168,85,247,0.16),transparent_30%)]" />
       <div className="relative mx-auto flex max-w-7xl flex-col gap-12 sm:gap-16 lg:gap-24 px-4 sm:px-6 lg:flex-row lg:items-center">
         <div className="max-w-2xl space-y-8">
-          <span className={`inline-flex rounded-full px-4 py-2 text-sm font-medium ring-1 ${
+          <span className={`inline-flex rounded-full px-4 py-2 text-sm font-medium ring-1 animate-pulse ${
             isDark ? 'bg-indigo-500/15 text-indigo-300 ring-indigo-500/20' : 'bg-indigo-100 text-indigo-700 ring-indigo-200'
           }`}>
-            Portfolio • Web Developer
+            ✨ Portfolio • Web Developer
           </span>
 
           <div className="space-y-6">
-            <h1 className="text-5xl font-semibold tracking-tight sm:text-6xl">
+            <h1 className={`text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-tight bg-clip-text bg-gradient-to-r ${
+              isDark 
+                ? 'from-white via-slate-100 to-slate-300' 
+                : 'from-slate-900 via-indigo-700 to-slate-800'
+            } text-transparent`}>
               Hi, I'm Ashwin Verma.
-              <span className={`block ${isDark ? 'text-indigo-300' : 'text-indigo-500'}`}>I create polished digital experiences.</span>
+              <span className={`block mt-2 text-4xl sm:text-5xl lg:text-6xl bg-clip-text bg-gradient-to-r ${
+                isDark 
+                  ? 'from-indigo-400 to-purple-400' 
+                  : 'from-indigo-600 to-purple-600'
+              } text-transparent`}>I create polished digital experiences.</span>
             </h1>
-            <p className={`text-lg ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>
+            <p className={`text-lg sm:text-xl ${isDark ? 'text-slate-300' : 'text-slate-700'} leading-relaxed max-w-2xl`}>
               I build responsive, modern web applications with React, Tailwind, and Java backend services.
               My focus is clean interfaces, strong performance, and seamless user experience.
             </p>

@@ -23,7 +23,7 @@ const Contact = () => {
             <div className={`space-y-4 rounded-4xl border p-8 ${isDark ? 'border-white/10 bg-slate-950/80' : 'border-slate-200 bg-slate-50'}`}>
               <div>
                 <p className={`text-sm ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Email</p>
-                <p className={`mt-2 text-base ${isDark ? 'text-white' : 'text-slate-900'}`}>ashwin@example.com</p>
+                <p className={`mt-2 text-base ${isDark ? 'text-white' : 'text-slate-900'}`}>vermaashwin904@gmail.com</p>
               </div>
               <div>
                 <p className={`text-sm ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Location</p>

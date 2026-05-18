@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
         <div className="flex items-center gap-2 sm:gap-3 min-w-0">
           <div className="h-9 w-9 sm:h-10 sm:w-10 rounded-2xl bg-linear-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-base sm:text-lg font-bold shadow-lg shadow-indigo-500/20 shrink-0">
-            A
+            AV
           </div>
           <div className="hidden xs:block min-w-0">
             <p className={`text-xs sm:text-sm truncate ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>Ashwin Verma</p>
@@ -52,7 +52,7 @@ const Navbar = () => {
             </Link>
           ))}
           <a
-            href="/resume.pdf"
+            href="https://drive.google.com/file/d/12xNxFBhqAZH0r6Sbbz7CYXdZoyQk7e32/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
